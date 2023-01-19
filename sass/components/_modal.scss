@@ -1,0 +1,200 @@
+.backdrop--is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+textarea#comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.modal {
+  position: sticky;
+  width: 528px;
+  top: 221px;
+  right: 536px;
+  bottom: 222px;
+  left: 536px;
+  left: 50%;
+  background: $primaryBrightColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: $defaultBorderRadius;
+  transform: translate(-50%);
+  box-sizing: border-box;
+
+  &__backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 500ms ease-in-out;
+
+    .modal {
+      transform: translate(-50%) scale(1);
+      transition: 500ms ease-in-out;
+    }
+
+    &.backdrop--is-hidden {
+      .modal {
+        transform: translate(-50%) scale(0);
+        transition: 500ms ease-in-out;
+      }
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: $primaryBrightColor;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+
+    &:hover {
+      background-color: $brandBlueColor;
+      color: $secondaryBrightColor;
+      transition: $defaultTransition;
+    }
+  }
+
+  &__form-wrapper {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  &__form-header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 12px;
+  }
+
+  &__form-label {
+    display: block;
+    padding-bottom: 4px;
+    color: $secondaryTextColor;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+  }
+
+  &__form-field {
+    position: relative;
+    margin-bottom: 10px;
+
+    &-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      transition: fill $defaultTransition;
+    }
+  }
+
+  &__form-field:focus-within &__form-field-icon,
+  &__form-field:hover &__form-field-icon {
+    fill: $brandBlueColor;
+  }
+
+  &__form-links {
+    text-decoration: underline;
+    color: $brandBlueColor;
+  }
+
+  &__form-input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $defaultBorderRadius;
+    width: 100%;
+    height: 40px;
+    padding: 12px 0 12px 42px;
+    box-sizing: border-box;
+    transition: $defaultTransition;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $brandBlueColor;
+    }
+  }
+
+  &__form-comment {
+    @extend .modal__form-input;
+    resize: none;
+    height: 120px;
+    padding: 12px 0 0 16px;
+
+    &:hover,
+    &:focus {
+      border-color: $brandBlueColor;
+    }
+  }
+
+  &__form-checkbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    & input {
+      background-color: $primaryBrightColor;
+      margin: 0;
+      appearance: none;
+      border: 2px solid $primaryTextColor;
+      width: 15px;
+      height: 14px;
+      border-radius: 2px;
+      margin-right: 7px;
+      transition: $defaultTransition;
+    }
+
+    & input:checked {
+      background-color: $brandBlueColor;
+      border: none;
+    }
+  }
+
+  &__form-check-icon {
+    width: 11px;
+    height: 10px;
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $primaryBrightColor;
+  }
+
+  &__form-terms-text {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $secondaryTextColor;
+  }
+
+  &__form-button {
+    @extend .hero__button;
+    display: block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+  }
+}

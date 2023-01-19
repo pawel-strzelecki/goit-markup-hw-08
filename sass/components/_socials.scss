@@ -1,0 +1,38 @@
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 10px;
+
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icons {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &__border {
+    display: flex;
+    padding: 12px;
+    color: $primaryIconColor;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: $brandBlueColor;
+      color: $secondaryBrightColor;
+      transition: $defaultTransition;
+    }
+    &--footer {
+      border: 1px hidden $secondaryIconColor;
+      background-color: $secondaryIconColor;
+      color: $primaryBrightColor;
+    }
+  }
+}

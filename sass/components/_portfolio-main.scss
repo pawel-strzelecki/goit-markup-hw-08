@@ -1,0 +1,56 @@
+.portfolio__main {
+  color: $secondaryTextColor;
+  line-height: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio__card {
+  margin-bottom: 30px;
+
+  &:hover &-overlay {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    transition: $defaultTransition;
+    transform: translateY(-100%);
+  }
+
+  &-overflow {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+  }
+
+  &-overlay {
+    position: absolute;
+    color: $primaryBrightColor;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 49px 45px 49px 24px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    transition: $defaultTransition;
+    box-sizing: border-box;
+  }
+}
+
+.portfolio__name {
+  color: $primaryTextColor;
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 4px;
+}
+
+.portfolio__caption {
+  border-left: solid 1px #eeeeee;
+  border-right: solid 1px #eeeeee;
+  border-bottom: solid 1px #eeeeee;
+  padding: 20px 24px 20px 24px;
+  cursor: pointer;
+}
