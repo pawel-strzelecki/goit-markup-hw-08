@@ -8,8 +8,8 @@
   }
 
   &__padding {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   &__menu {
@@ -79,5 +79,32 @@
   &__contacts-icon-mail:focus,
   &__contacts-icon-tel:focus {
     fill: $brandBlueColor;
+  }
+}
+
+@media screen and (min-width: $tabletSize) and (max-width: $desktopSize) {
+  .header__padding {
+    padding: 26px 25px;
+  }
+
+  .header__contacts-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header__menu-contact-link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: $desktopSize) {
+  .header__contacts-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__padding {
+    padding: 26px 25px;
   }
 }
