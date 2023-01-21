@@ -1,30 +1,57 @@
 .strengths__list {
   list-style-type: none;
   font-size: 14px;
-  line-height: 1.17;
+  line-height: 1.7;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-  .strengths__box {
-    border-radius: 4px;
-    background: $secondaryBrightColor;
-    width: 270px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+.strengths__box {
+  border-radius: $defaultBorderRadius;
+  background: $secondaryBrightColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.strengths__title {
+  text-align: center;
+}
+
+.strengths__text {
+  color: $secondaryTextColor;
+  font-size: 14px;
+  line-height: 1.7;
+  padding-top: 10px;
+}
+
+.strengths__icons {
+  width: 70px;
+  height: 70px;
+}
+
+@media screen and (min-width: $tabletSize) {
+  .strengths__title {
+    text-align: left;
   }
 
-  .strengths__text {
-    color: $secondaryTextColor;
-    font-size: 14px;
-    line-height: 1.7;
-    padding-top: 10px;
+  .strengths__list-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $desktopSize) {
+  // .advantages {
+  //   padding: 94px 0;
+  // }
+
+  .strengths__list {
+    flex-wrap: nowrap;
   }
 
-  .strengths__icons {
-    width: 70px;
-    height: 70px;
+  .strengths__title {
+    text-align: left;
   }
 }
