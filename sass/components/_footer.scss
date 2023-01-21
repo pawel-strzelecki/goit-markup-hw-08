@@ -117,6 +117,7 @@
 @media screen and (min-width: $desktopSize) {
   .footer__flex {
     display: flex;
+    text-align: left;
   }
 
   .footer__join-us {
