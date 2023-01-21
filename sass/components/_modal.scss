@@ -14,12 +14,10 @@ textarea#comment::placeholder {
 }
 
 .modal {
-  position: sticky;
-  width: 528px;
-  top: 221px;
-  right: 536px;
-  bottom: 222px;
-  left: 536px;
+  position: absolute;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  min-height: 581px;
   left: 50%;
   background: $primaryBrightColor;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -178,15 +176,15 @@ textarea#comment::placeholder {
     width: 11px;
     height: 10px;
     position: absolute;
-    left: 18px;
+    left: 2%;
     top: 50%;
     transform: translateY(-50%);
     fill: $primaryBrightColor;
   }
 
   &__form-terms-text {
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $secondaryTextColor;
   }
@@ -196,5 +194,20 @@ textarea#comment::placeholder {
     display: block;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $desktopSize) {
+  .modal {
+    max-width: 528px;
+  }
+
+  .modal__form-terms-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .modal__form-check-icon {
+    left: 4%;
   }
 }
