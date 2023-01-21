@@ -31,3 +31,23 @@
 .team__job {
   color: $secondaryTextColor;
 }
+
+@media screen and (min-width: $tabletSize) {
+  .team__card {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $desktopSize) {
+  // .team {
+  //   padding: 94px 0;
+  // }
+
+  .team__flex {
+    flex-wrap: nowrap;
+  }
+
+  // .team__description-text {
+  //   margin-bottom: 30px;
+  // }
+}

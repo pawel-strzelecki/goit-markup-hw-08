@@ -13,7 +13,6 @@
   &__flex {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
@@ -97,5 +96,42 @@
       height: 24px;
       fill: $primaryBrightColor;
     }
+  }
+}
+
+@media screen and (min-width: $tabletSize) {
+  .footer__flex {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .footer__newsletter-form-input {
+    width: 450px;
+  }
+
+  .footer__join-us {
+    padding-top: 0px;
+  }
+}
+
+@media screen and (min-width: $desktopSize) {
+  .footer__flex {
+    display: flex;
+  }
+
+  .footer__join-us {
+    padding: 12px 0px 0px 70px;
+  }
+
+  .footer__newsletter-flex {
+    padding: 12px 0px 0px 70px;
+  }
+
+  .footer__newsletter-form-flex {
+    flex-direction: row;
+  }
+
+  .footer__newsletter-form-input {
+    width: 340px;
   }
 }
