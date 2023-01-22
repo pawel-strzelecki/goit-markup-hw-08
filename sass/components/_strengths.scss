@@ -35,7 +35,7 @@
   height: 70px;
 }
 
-@media screen and (min-width: $tabletSizeStart) and (max-width: $mobileSizeEnd) {
+@media screen and (min-width: $mobileSizeEnd) {
   .strengths__list {
     padding-bottom: 45px;
   }
@@ -49,7 +49,11 @@
   }
 }
 
-@media screen and (min-width: $desktopSize) {
+@media screen and (min-width: $tabletSizeEnd) {
+  .section__padding-top {
+    padding-top: 94px;
+  }
+
   .strengths__list {
     flex-wrap: nowrap;
   }
