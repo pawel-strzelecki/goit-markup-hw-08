@@ -26,14 +26,24 @@
     justify-content: space-between;
     flex-direction: column;
     padding: 40px;
-    box-sizing: border-box;
+    font-weight: 500;
   }
 
   &__toggle {
     background: none;
     border: none;
     cursor: pointer;
-    fill: currentColor;
+
+    &-icon {
+      width: 25px;
+      height: 25px;
+      fill: currentColor;
+      transition: $defaultTransition;
+
+      &:hover {
+        fill: $brandBlueColor;
+      }
+    }
   }
 
   &__navigation {
@@ -43,11 +53,20 @@
     gap: 32px;
 
     &-link {
-      font-weight: 500;
       font-size: 40px;
       line-height: 1.18;
       text-align: center;
       letter-spacing: 0.02em;
+      transition: $defaultTransition;
+
+      &:hover,
+      &:active {
+        color: $brandBlueColor;
+      }
+
+      &--active {
+        color: $brandBlueColor;
+      }
 
       &-tel {
         font-size: 34px;
@@ -67,7 +86,6 @@
     padding-top: 64px;
 
     &-item {
-      font-weight: 500;
       font-size: 18px;
       line-height: 1.22;
       letter-spacing: 0.02em;
@@ -90,10 +108,16 @@
 
   &__close-button {
     position: absolute;
-    right: 10px;
-    font-size: 40px;
+    top: 1%;
+    right: 3%;
+    font-size: 45px;
     border: none;
     background: none;
     cursor: pointer;
+    color: currentColor;
+    transition: color 500ms ease-in-out;
+    &:hover {
+      color: $brandBlueColor;
+    }
   }
 }
