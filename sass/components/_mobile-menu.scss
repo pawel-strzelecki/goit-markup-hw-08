@@ -1,11 +1,11 @@
-@media screen and (max-width: $tabletSize) {
+@media screen and (max-width: $mobileSizeEnd) {
   .header__nav,
   .contacts {
     display: none;
   }
 }
 
-@media screen and (min-width: $tabletSize) {
+@media screen and (min-width: $mobileSizeEnd) {
   .mobile-menu__toggle {
     display: none;
   }
@@ -101,7 +101,6 @@
   }
 
   &.is-open {
-    transform: translateX(0);
     opacity: 1;
     display: block;
   }

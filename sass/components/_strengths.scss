@@ -4,7 +4,7 @@
   line-height: 1.7;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   padding-bottom: 60px;
 }
 
@@ -35,7 +35,7 @@
   height: 70px;
 }
 
-@media screen and (min-width: $tabletSize) {
+@media screen and (min-width: $tabletSizeStart) and (max-width: $mobileSizeEnd) {
   .strengths__list {
     padding-bottom: 45px;
   }

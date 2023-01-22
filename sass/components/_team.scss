@@ -31,13 +31,13 @@
   color: $secondaryTextColor;
 }
 
-@media screen and (min-width: $tabletSize) {
+@media screen and (min-width: $mobileSizeEnd) {
   .team__card {
     flex-basis: calc((100% - 30px) / 2);
   }
 }
 
-@media screen and (min-width: $desktopSize) {
+@media screen and (min-width: $tabletSizeEnd) {
   .team__flex {
     flex-wrap: nowrap;
   }

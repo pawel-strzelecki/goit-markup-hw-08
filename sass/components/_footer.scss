@@ -99,7 +99,7 @@
   }
 }
 
-@media screen and (min-width: $tabletSize) {
+@media screen and (min-width: $mobileSizeEnd) {
   .footer__flex {
     flex-direction: row;
     justify-content: space-around;
@@ -114,7 +114,7 @@
   }
 }
 
-@media screen and (min-width: $desktopSize) {
+@media screen and (min-width: $tabletSizeEnd) {
   .footer__flex {
     display: flex;
     text-align: left;

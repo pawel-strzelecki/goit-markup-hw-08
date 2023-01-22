@@ -6,9 +6,9 @@
   gap: 30px;
   flex-wrap: wrap;
 
-  &-item {
-    flex-basis: calc((100% - 30px) / 2);
-  }
+  // &-item {
+  //   flex-basis: calc((100% - 30px) / 2);
+  // }
 }
 
 .clients__box {
@@ -21,9 +21,12 @@
   border: 1px solid $primaryIconColor;
   color: $primaryIconColor;
   border-radius: 4px;
-  width: auto;
+  width: 210px;
   height: 92px;
   transition: $defaultTransition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &:focus {
@@ -33,28 +36,24 @@
 }
 
 .clients__icon {
-  width: 106px;
-  height: 60px;
+  width: auto;
+  height: 100%;
   padding: 15px 30px;
   fill: currentColor;
 }
 
-@media screen and (min-width: $tabletSize) {
-  .clients__list-item {
-    flex-basis: calc((100% - 30px) / 3);
+@media screen and (min-width: $mobileSizeEnd) {
+  .clients__border {
+    width: 226px;
   }
 }
 
-@media screen and (min-width: $desktopSize) {
-  // .clients {
-  //   padding-top: 94px;
-  // }
-
+@media screen and (min-width: $tabletSizeEnd) {
   .clients__list {
     flex-wrap: nowrap;
   }
 
-  .clients__list-item {
-    flex-basis: auto;
+  .clients__border {
+    width: 170px;
   }
 }

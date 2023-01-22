@@ -1,8 +1,15 @@
 .hero {
-  background: linear-gradient($transparentBackgroundColor, $transparentBackgroundColor),
+  background-color: $transparentBackgroundColor;
+  background-image: linear-gradient($transparentBackgroundColor, $transparentBackgroundColor),
     url(../images/banner-photo.jpg);
+  height: 400px;
   background-size: cover;
+  background-position: center;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__text {
     font-weight: 900;
@@ -12,7 +19,6 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $primaryBrightColor;
-    padding-top: 200px;
     padding-bottom: 30px;
     margin: 0;
   }
@@ -29,12 +35,6 @@
     height: 50px;
     border: none;
     border-radius: $defaultBorderRadius;
-
-    &-flex {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 200px;
-    }
   }
 }
 
@@ -45,16 +45,9 @@
   }
 }
 
-@media screen and (min-width: $tabletSize) and (max-width: $tabletSize) {
-  .hero {
-    padding-top: 80px;
-  }
-}
-
-@media screen and (min-width: $desktopSize) {
+@media screen and (min-width: $desktopSize) and (max-width: $tabletSizeEnd) {
   .hero {
     height: 600px;
-    padding-top: 80px;
   }
 
   .hero__text {
