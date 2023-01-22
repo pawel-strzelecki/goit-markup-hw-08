@@ -39,9 +39,9 @@
   }
 }
 
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background: linear-gradient($transparentBackgroundColor, $transparentBackgroundColor),
+    background-image: linear-gradient($transparentBackgroundColor, $transparentBackgroundColor),
       url(../images/banner-photo@2x.jpg);
   }
 }
